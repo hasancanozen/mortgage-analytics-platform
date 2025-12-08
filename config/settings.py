@@ -1,10 +1,11 @@
+"""Module providing a function printing python version."""
 import os
 
 try:
     # Optional: load from .env if present
     from dotenv import load_dotenv  # type: ignore
     load_dotenv()
-except Exception:
+except ImportError:
     pass
 
 DB_CONFIG = {
